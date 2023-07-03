@@ -1,0 +1,27 @@
+bash-4.2$ gcc -c -Wall bit_operation.c
+bash-4.2$ gcc -o bit_operation bit_operation.o
+bash-4.2$ ./bit_operation
+enter the number: 3717
+3717 = [0000 0000 0000 0000 0000 1110 1000 0101 ]
+enter which bit has to be set: 13
+11909 = [0000 0000 0000 0000 0010 1110 1000 0101 ]
+enter which bit has to be cleared: 13
+3717 = [0000 0000 0000 0000 0000 1110 1000 0101 ]
+enter which bit has to be toggled: 7
+3589 = [0000 0000 0000 0000 0000 1110 0000 0101 ]
+enter number to check if that is power of 2: 9
+9 is NOT power of 2
+bash-4.2$
+bash-4.2$
+bash-4.2$ ./bit_operation
+enter the number: 3717
+3717 = [0000 0000 0000 0000 0000 1110 1000 0101 ]
+enter which bit has to be set: 13
+11909 = [0000 0000 0000 0000 0010 1110 1000 0101 ]
+enter which bit has to be cleared: 13
+3717 = [0000 0000 0000 0000 0000 1110 1000 0101 ]
+enter which bit has to be toggled: 7
+3589 = [0000 0000 0000 0000 0000 1110 0000 0101 ]
+enter number to check if that is power of 2: 32
+32 is power of 2
+bash-4.2$
