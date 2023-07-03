@@ -1,0 +1,31 @@
+bash-4.2$
+bash-4.2$
+bash-4.2$ ./loop_in_linked_list
+List: [0]->[1]->[2]->[3]->[4]->[5]->[6]->[7]->[8]->[9]->
+loop detected
+node_inside_loop->data=[7], curr->next->data=[8], temp_head->data=[0]
+node_inside_loop->data=[7], curr->next->data=[9], temp_head->data=[0]
+node_inside_loop->data=[7], curr->next->data=[3], temp_head->data=[0]
+node_inside_loop->data=[7], curr->next->data=[4], temp_head->data=[0]
+node_inside_loop->data=[7], curr->next->data=[5], temp_head->data=[0]
+node_inside_loop->data=[7], curr->next->data=[6], temp_head->data=[0]
+node_inside_loop->data=[7], curr->next->data=[8], temp_head->data=[1]
+node_inside_loop->data=[7], curr->next->data=[9], temp_head->data=[1]
+node_inside_loop->data=[7], curr->next->data=[3], temp_head->data=[1]
+node_inside_loop->data=[7], curr->next->data=[4], temp_head->data=[1]
+node_inside_loop->data=[7], curr->next->data=[5], temp_head->data=[1]
+node_inside_loop->data=[7], curr->next->data=[6], temp_head->data=[1]
+node_inside_loop->data=[7], curr->next->data=[8], temp_head->data=[2]
+node_inside_loop->data=[7], curr->next->data=[9], temp_head->data=[2]
+node_inside_loop->data=[7], curr->next->data=[3], temp_head->data=[2]
+node_inside_loop->data=[7], curr->next->data=[4], temp_head->data=[2]
+node_inside_loop->data=[7], curr->next->data=[5], temp_head->data=[2]
+node_inside_loop->data=[7], curr->next->data=[6], temp_head->data=[2]
+node_inside_loop->data=[7], curr->next->data=[8], temp_head->data=[3]
+node_inside_loop->data=[7], curr->next->data=[9], temp_head->data=[3]
+curr->next = temp_head, found the culprit!!
+node_inside_loop->data=[7], curr->next->data=[3], temp_head->data=[3]
+Loop is removed. Your linked_list is clean now!!
+List: [0]->[1]->[2]->[3]->[4]->[5]->[6]->[7]->[8]->[9]->
+bash-4.2$
+bash-4.2$
