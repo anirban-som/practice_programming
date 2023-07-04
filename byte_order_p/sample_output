@@ -1,0 +1,8 @@
+bash-4.2$
+bash-4.2$ ./byte_order
+a=[37733]
+bit representation = [1001 0011 0110 0101 ]
+After byte swap, a=[26003]:
+bit representation = [0110 0101 1001 0011 ]
+bash-4.2$
+bash-4.2$
