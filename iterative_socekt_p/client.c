@@ -37,7 +37,6 @@ int main(int argc, char const* argv[])
      * handshake. The function returns only when the connection is established,
      * or an error occurs.
      * */
-
     retval = connect(client_sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
     if (retval < 0) {
         perror("connect failed");
