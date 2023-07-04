@@ -1,0 +1,37 @@
+bash-4.2$
+bash-4.2$ gcc multithread_increment_num.c -lpthread
+bash-4.2$
+bash-4.2$
+bash-4.2$ ./a.out
+print_even: num=[2]
+print_odd: num=[1]
+print_odd: num=[3]
+print_odd: num=[5]
+print_even: num=[4]
+print_even: num=[6]
+print_even: num=[8]
+print_odd: num=[7]
+print_odd: num=[9]
+print_odd: num=[11]
+print_even: num=[10]
+print_even: num=[12]
+print_even: num=[14]
+print_odd: num=[13]
+print_odd: num=[15]
+print_odd: num=[17]
+print_even: num=[16]
+print_even: num=[18]
+print_even: num=[20]
+print_odd: num=[19]
+print_odd: num=[21]
+print_odd: num=[23]
+print_even: num=[22]
+print_even: num=[24]
+print_even: num=[26]
+print_odd: num=[25]
+print_odd: num=[27]
+print_odd: num=[29]
+print_even: num=[28]
+print_even: num=[30]
+bash-4.2$
+bash-4.2$
