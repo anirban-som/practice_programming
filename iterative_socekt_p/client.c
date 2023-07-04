@@ -30,6 +30,14 @@ int main(int argc, char const* argv[])
     server_addr.sin_port = htons(my_port);
     server_addr.sin_addr.s_addr = inet_addr(argv[2]);
 
+    
+    /*
+     * The “connect()” system call is used by a client to establish a connection
+     * with a Server. In case of TCP, “connect()” initiates TCP’s three way
+     * handshake. The function returns only when the connection is established,
+     * or an error occurs.
+     * */
+
     retval = connect(client_sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr));
     if (retval < 0) {
         perror("connect failed");
