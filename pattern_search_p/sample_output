@@ -1,0 +1,16 @@
+bash-4.2$
+bash-4.2$ ./patter_search
+str=[My name is Anirban. I live in Burdwan]
+pat=[Anirban]
+pattern found
+bash-4.2$
+bash-4.2$
+
+enabling commented out code:
+bash-4.2$
+bash-4.2$ ./patter_search
+str=[My name is Anirban. I live in Burdwan]
+pat=[AnirbanS]
+pattern not found
+bash-4.2$
+bash-4.2$
