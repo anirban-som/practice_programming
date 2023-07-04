@@ -43,7 +43,7 @@ int main(int argc, char const* argv[])
     if (bytes_read > 0) {
         printf("msg received from server: [%s]\n", ser_buf);
     }
-
+    /*close the connection socket*/
     close(client_sockfd);
 
     return 0;
