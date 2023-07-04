@@ -1,0 +1,21 @@
+server terminal:
+bash-4.2$
+bash-4.2$ ./server 3377 "Hi, Your connection requested is accepted and message is acknowledged"
+Waiting for client to accept
+bytes_read=[29], msg received from client=[I am client. please accept me]
+ack sent to client
+Waiting for client to accept
+
+
+client terminal:
+bash-4.2$
+bash-4.2$ ./client
+provide all 3 arguments: argv[1]<port>, argv[2]<ip 127.0.0.1>, argv3<msg to be send to server>
+bash-4.2$
+bash-4.2$
+bash-4.2$ ./client 3377 127.0.0.1 "I am client. please accept me"
+sending msg to server.
+msg received from server: [Hi, Your connection requested is accepted and message is acknowledged]
+bash-4.2$
+bash-4.2$
+
