@@ -88,7 +88,13 @@ int main(int argc, char const* argv[])
 
         send(conn_fd, ser_buf, strlen(ser_buf), 0);
         printf("ack sent to client\n");
+
+        /*close the connection socket*/
+        close(conn_fd);
     }
+
+    /*close the listening socket*/
+    shutdown(socket_desc, SHUT_RDWR);
 
     return 0;
 }
