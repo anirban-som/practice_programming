@@ -1,0 +1,8 @@
+bash-4.2$
+bash-4.2$ gcc -c -Wall file1.c file2.c
+bash-4.2$ gcc -o using_extern2 file1.o file2.o
+bash-4.2$
+bash-4.2$ ./using_extern2
+a=[11]
+bash-4.2$
+bash-4.2$
