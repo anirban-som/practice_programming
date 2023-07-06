@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-extern int a;
+extern int a; //declaration. indicates that int a is defined somewhere else.
 
 int main(void)
 {
