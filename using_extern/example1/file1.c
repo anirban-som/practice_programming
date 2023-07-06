@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-extern int a; //declaration. indicates that int a is defined somewhere else.
+extern int a; //declaration. No memory gets allocated by this. It only indicates that int a is defined somewhere else.
 
 int main(void)
 {
