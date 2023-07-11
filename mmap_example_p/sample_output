@@ -1,0 +1,23 @@
+anirban@anirban-virtual-machine:~/Documents/programming/mmap_example_p$ ls
+abc  mmap_example  mmap_example.c  mmap_example.o
+anirban@anirban-virtual-machine:~/Documents/programming/mmap_example_p$ cat abc
+Hello Buddy!
+This file will be memory mappped from another process.
+And from there it will read and written to.
+Cheers!
+
+anirban@anirban-virtual-machine:~/Documents/programming/mmap_example_p$ ./mmap_example abc
+reading from mapped file:
+Hello Buddy!
+This file will be memory mappped from another process.
+And from there it will read and written to.
+Cheers!
+
+over written to the mapped file
+reading from mapped file:
+This part of mapped memory is overwritten from this program
+rocess.
+And from there it will read and written to.
+Cheers!
+
+anirban@anirban-virtual-machine:~/Documents/programming/mmap_example_p$ 
