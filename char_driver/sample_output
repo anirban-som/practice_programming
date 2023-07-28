@@ -1,0 +1,69 @@
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ ls
+main.c  Makefile  mycdev.h  mycdev_user_app.c
+anirban@anirban-virtual-machine:~/Documents/char_driver$ gcc -c -Wall mycdev_user_app.c 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ gcc -o mycdev_user_app mycdev_user_app.o 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ ls
+main.c  Makefile  mycdev.h  mycdev_user_app  mycdev_user_app.c  mycdev_user_app.o
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ make 
+make -C /lib/modules/5.15.0-75-generic/build M=/home/anirban/Documents/char_driver modules
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-75-generic'
+  CC [M]  /home/anirban/Documents/char_driver/main.o
+  LD [M]  /home/anirban/Documents/char_driver/my_char_dev.o
+  MODPOST /home/anirban/Documents/char_driver/Module.symvers
+  CC [M]  /home/anirban/Documents/char_driver/my_char_dev.mod.o
+  LD [M]  /home/anirban/Documents/char_driver/my_char_dev.ko
+  BTF [M] /home/anirban/Documents/char_driver/my_char_dev.ko
+Skipping BTF generation for /home/anirban/Documents/char_driver/my_char_dev.ko due to unavailability of vmlinux
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-75-generic'
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ sudo make install
+cp my_char_dev.ko /lib/modules/5.15.0-75-generic/kernel/drivers/char
+depmod -a
+insmod my_char_dev.ko
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ dmesg
+[14501.885357] inside my_char_dev_init
+anirban@anirban-virtual-machine:~/Documents/char_driver$
+anirban@anirban-virtual-machine:~/Documents/char_driver$ dmesg
+[14398.159403] my_char_dev_exit:130
+[14398.160288] my_char_dev_exit:135
+[14398.160312] my_char_dev_exit:139
+[14501.885357] inside my_char_dev_init
+[14834.698997] Anirban: mycdev_open
+[14834.699025] date received from user=[Hello Buddy! I am from user space] 
+[14834.699045] Anirban: mycdev_release
+[14834.699068] Anirban: mycdev_open
+[14834.699402] Anirban: mycdev_release
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ sudo make uninstall
+rm /lib/modules/5.15.0-75-generic/kernel/drivers/char/my_char_dev.ko
+depmod -a
+rmmod my_char_dev
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ dmesg
+[14501.885357] inside my_char_dev_init
+[14834.698997] Anirban: mycdev_open
+[14834.699025] date received from user=[Hello Buddy! I am from user space] 
+[14834.699045] Anirban: mycdev_release
+[14834.699068] Anirban: mycdev_open
+[14834.699402] Anirban: mycdev_release
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ ls
+main.c  main.o  Makefile  modules.order  Module.symvers  mycdev.h  mycdev_user_app  mycdev_user_app.c  mycdev_user_app.o  my_char_dev.ko  my_char_dev.mod  my_char_dev.mod.c  my_char_dev.mod.o  my_char_dev.o
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ make clean
+make -C /lib/modules/5.15.0-75-generic/build M=/home/anirban/Documents/char_driver clean
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-75-generic'
+  CLEAN   /home/anirban/Documents/char_driver/Module.symvers
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-75-generic'
+rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions *.order *.symvers *.mod
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ ls
+main.c  Makefile  mycdev.h  mycdev_user_app  mycdev_user_app.c
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
+anirban@anirban-virtual-machine:~/Documents/char_driver$ 
